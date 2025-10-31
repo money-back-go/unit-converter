@@ -1,0 +1,47 @@
+🔢 UNIT CONVERTER - CONVERSOR DE UNIDADES
+
+Cansado de procurar conversores diferentes para cada tipo de medida? O Unit Converter foi criado para você!
+
+✨ DESTAQUES
+• 8 categorias de conversão em um único app
+• Funciona 100% offline - sem necessidade de internet
+• Interface limpa e fácil de usar
+• Precisão absoluta em todas as conversões
+• Totalmente gratuito e sem anúncios
+
+📏 CATEGORIAS DISPONÍVEIS
+• Comprimento: metro, quilômetro, milha, pé, polegada e mais
+• Peso: quilograma, grama, libra, onça, tonelada
+• Temperatura: Celsius, Fahrenheit, Kelvin
+• Volume: litro, mililitro, galão, metro cúbico
+• Área: metro quadrado, hectare, acre
+• Velocidade: km/h, mph, m/s, nós
+• Tempo: segundos, minutos, horas, dias, semanas
+• Dados Digitais: bytes, KB, MB, GB, TB
+
+🎯 POR QUE ESCOLHER O UNIT CONVERTER?
+✓ Simples e direto ao ponto - sem funcionalidades desnecessárias
+✓ Rápido - resultados instantâneos enquanto você digita
+✓ Leve - menos de 50MB, não consome bateria
+✓ Sem cadastro - baixe e use imediatamente
+✓ Sem anúncios - experiência limpa do início ao fim
+✓ Offline - funciona em qualquer lugar
+
+💡 COMO USAR
+1. Escolha uma categoria (comprimento, peso, etc)
+2. Selecione as unidades de origem e destino
+3. Digite o valor
+4. Veja o resultado instantaneamente!
+
+📱 INTERFACE MODERNA
+Design clean com cores vibrantes, animações suaves e navegação intuitiva. Criado para ser simples, bonito e eficiente.
+
+🔒 PRIVACIDADE
+Sem coleta de dados pessoais. O app funciona offline e não compartilha nenhuma informação.
+
+Baixe o Unit Converter agora e simplifique suas conversões do dia a dia!
+
+---
+Desenvolvido com ❤️ para facilitar sua vida
+Versão: 1.0.0
+
