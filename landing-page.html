@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter - Conversor de Unidades</title>
+    <meta name="description" content="Converta facilmente entre diferentes unidades de medida. 100% offline, rápido e preciso!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+        .gradient-orange {
+            background: linear-gradient(135deg, #FFAE14 0%, #FF8C42 100%);
+        }
+        .gradient-dark {
+            background: linear-gradient(135deg, #15203D 0%, #2C3E5F 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FFAE14',
+                        'secondary': '#15203D',
+                        'accent': '#FF5963'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 gradient-orange rounded-full flex items-center justify-center">
+                        <i class="fas fa-calculator text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-secondary">Unit Converter</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary transition">Funcionalidades</a>
+                    <a href="#categories" class="text-gray-700 hover:text-primary transition">Categorias</a>
+                    <a href="#download" class="text-gray-700 hover:text-primary transition">Download</a>
+                </div>
+                <a href="#download" class="gradient-orange text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition">
+                    Baixar Agora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block bg-primary/20 px-4 py-2 rounded-full">
+                        <span class="text-primary font-semibold">✨ 100% Gratuito e Sem Anúncios</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                        Converta Unidades <span class="text-primary">Instantaneamente</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        Cansado de procurar conversores diferentes para cada tipo de medida? O Unit Converter foi criado para você!
+                    </p>
+                    <p class="text-lg text-gray-400">
+                        Com uma interface limpa e intuitiva, converta qualquer unidade de medida de forma rápida e precisa. São 8 categorias completas, todas em um único app, sem necessidade de internet.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#download" class="gradient-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition hover-scale flex items-center justify-center">
+                            <i class="fab fa-google-play mr-3"></i>
+                            Google Play
+                        </a>
+                        <a href="#download" class="bg-white text-secondary px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition hover-scale flex items-center justify-center">
+                            <i class="fab fa-app-store-ios mr-3"></i>
+                            App Store
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-6 pt-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-2 text-gray-300">5.0</span>
+                        </div>
+                        <span class="text-gray-400">•</span>
+                        <span class="text-gray-300">+10.000 downloads</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 mx-auto" style="max-width: 300px;">
+                        <!-- Mockup de celular -->
+                        <div class="bg-gray-900 rounded-[3rem] p-3 shadow-2xl">
+                            <div class="bg-white rounded-[2.5rem] overflow-hidden">
+                                <div class="aspect-[9/19.5] bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                                    <div class="text-center text-white p-8">
+                                        <i class="fas fa-calculator text-6xl mb-6 opacity-90"></i>
+                                        <h3 class="text-2xl font-bold mb-3">Unit Converter</h3>
+                                        <p class="text-sm opacity-80">8 Categorias de Conversão</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Elementos decorativos -->
+                    <div class="absolute top-10 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-10 -left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4">
+                    Por que escolher o <span class="text-primary">Unit Converter</span>?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Simples, rápido e preciso. Tudo que você precisa em um único app.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition hover-scale">
+                    <div class="w-16 h-16 gradient-orange rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">100% Offline</h3>
+                    <p class="text-gray-600">
+                        Funciona sem internet. Converta a qualquer momento, em qualquer lugar.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition hover-scale">
+                    <div class="w-16 h-16 gradient-orange rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Precisão Absoluta</h3>
+                    <p class="text-gray-600">
+                        Fórmulas matemáticas precisas para resultados confiáveis em todas as conversões.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition hover-scale">
+                    <div class="w-16 h-16 gradient-orange rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Interface Intuitiva</h3>
+                    <p class="text-gray-600">
+                        Design moderno e fácil de usar. Converta em apenas 2 toques.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition hover-scale">
+                    <div class="w-16 h-16 gradient-orange rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-moon text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Modo Escuro</h3>
+                    <p class="text-gray-600">
+                        Interface adaptável para uso confortável em qualquer hora do dia.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition hover-scale">
+                    <div class="w-16 h-16 gradient-orange rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Sem Cadastro</h3>
+                    <p class="text-gray-600">
+                        Baixe e use imediatamente. Sem necessidade de criar conta ou fornecer dados.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition hover-scale">
+                    <div class="w-16 h-16 gradient-orange rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-feather-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Super Leve</h3>
+                    <p class="text-gray-600">
+                        Menos de 50MB. Não consome espaço nem bateria do seu dispositivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4">
+                    8 Categorias de Conversão
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Tudo que você precisa em um único lugar
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Categoria 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(255, 174, 20, 0.1);">
+                        <i class="fas fa-ruler text-3xl" style="color: #FFAE14;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Comprimento</h3>
+                    <p class="text-sm text-gray-500 mt-2">Metro, km, milhas, pés...</p>
+                </div>
+                
+                <!-- Categoria 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(255, 89, 99, 0.1);">
+                        <i class="fas fa-weight text-3xl" style="color: #FF5963;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Peso</h3>
+                    <p class="text-sm text-gray-500 mt-2">Kg, gramas, libras...</p>
+                </div>
+                
+                <!-- Categoria 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(75, 57, 239, 0.1);">
+                        <i class="fas fa-temperature-high text-3xl" style="color: #4B39EF;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Temperatura</h3>
+                    <p class="text-sm text-gray-500 mt-2">Celsius, Fahrenheit...</p>
+                </div>
+                
+                <!-- Categoria 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(57, 210, 192, 0.1);">
+                        <i class="fas fa-flask text-3xl" style="color: #39D2C0;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Volume</h3>
+                    <p class="text-sm text-gray-500 mt-2">Litros, ml, galões...</p>
+                </div>
+                
+                <!-- Categoria 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(238, 139, 96, 0.1);">
+                        <i class="fas fa-expand text-3xl" style="color: #EE8B60;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Área</h3>
+                    <p class="text-sm text-gray-500 mt-2">m², hectares, acres...</p>
+                </div>
+                
+                <!-- Categoria 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(36, 150, 137, 0.1);">
+                        <i class="fas fa-tachometer-alt text-3xl" style="color: #249689;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Velocidade</h3>
+                    <p class="text-sm text-gray-500 mt-2">km/h, mph, m/s...</p>
+                </div>
+                
+                <!-- Categoria 7 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(255, 111, 0, 0.1);">
+                        <i class="fas fa-clock text-3xl" style="color: #FF6F00;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Tempo</h3>
+                    <p class="text-sm text-gray-500 mt-2">Segundos, horas, dias...</p>
+                </div>
+                
+                <!-- Categoria 8 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition hover-scale text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(111, 97, 239, 0.1);">
+                        <i class="fas fa-database text-3xl" style="color: #6F61EF;"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg">Dados</h3>
+                    <p class="text-sm text-gray-500 mt-2">MB, GB, TB...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4">
+                    Como Funciona
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Simples e rápido em 3 passos
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-3xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Escolha a Categoria</h3>
+                    <p class="text-gray-600">
+                        Selecione entre 8 categorias: comprimento, peso, temperatura e mais.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-3xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Insira o Valor</h3>
+                    <p class="text-gray-600">
+                        Digite o valor que deseja converter e selecione as unidades.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-3xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Resultado Instantâneo</h3>
+                    <p class="text-gray-600">
+                        Veja o resultado na hora! Preciso e sem espera.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 gradient-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-5xl font-extrabold text-primary mb-2">8</div>
+                    <div class="text-lg text-gray-300">Categorias</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-primary mb-2">50+</div>
+                    <div class="text-lg text-gray-300">Unidades</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-primary mb-2">100%</div>
+                    <div class="text-lg text-gray-300">Offline</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-primary mb-2">0</div>
+                    <div class="text-lg text-gray-300">Anúncios</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-6">
+                Baixe Agora Gratuitamente
+            </h2>
+            <p class="text-xl text-gray-600 mb-12">
+                Disponível para Android e iOS
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                <a href="#" class="gradient-orange text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition hover-scale flex items-center justify-center space-x-3">
+                    <i class="fab fa-google-play text-2xl"></i>
+                    <div class="text-left">
+                        <div class="text-xs opacity-90">Disponível no</div>
+                        <div class="text-xl font-bold">Google Play</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="bg-secondary text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition hover-scale flex items-center justify-center space-x-3">
+                    <i class="fab fa-app-store-ios text-2xl"></i>
+                    <div class="text-left">
+                        <div class="text-xs opacity-90">Baixar na</div>
+                        <div class="text-xl font-bold">App Store</div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="bg-primary/10 border-2 border-primary rounded-2xl p-8">
+                <p class="text-secondary font-semibold text-lg mb-4">
+                    <i class="fas fa-gift text-primary mr-2"></i>
+                    Totalmente Gratuito • Sem Anúncios • Sem Compras no App
+                </p>
+                <p class="text-gray-600">
+                    Um app útil e prático para seu dia a dia. Baixe agora!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4">
+                    Perguntas Frequentes
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-3">
+                        <i class="fas fa-question-circle text-primary mr-3"></i>
+                        O app precisa de internet?
+                    </h3>
+                    <p class="text-gray-600 ml-10">
+                        Não! O Unit Converter funciona 100% offline. Baixe uma vez e use para sempre sem necessidade de conexão.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-3">
+                        <i class="fas fa-question-circle text-primary mr-3"></i>
+                        É realmente gratuito?
+                    </h3>
+                    <p class="text-gray-600 ml-10">
+                        Sim! O app é 100% gratuito, sem anúncios e sem compras dentro do app. Todas as funcionalidades estão disponíveis gratuitamente.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-3">
+                        <i class="fas fa-question-circle text-primary mr-3"></i>
+                        Quais unidades posso converter?
+                    </h3>
+                    <p class="text-gray-600 ml-10">
+                        Mais de 50 unidades diferentes em 8 categorias: comprimento, peso, temperatura, volume, área, velocidade, tempo e dados digitais.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-3">
+                        <i class="fas fa-question-circle text-primary mr-3"></i>
+                        As conversões são precisas?
+                    </h3>
+                    <p class="text-gray-600 ml-10">
+                        Sim! Utilizamos fórmulas matemáticas oficiais para garantir precisão em todas as conversões.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-orange text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+                Pronto para Começar?
+            </h2>
+            <p class="text-xl mb-10 opacity-90">
+                Baixe agora e simplifique suas conversões do dia a dia
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#download" class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition hover-scale">
+                    <i class="fas fa-download mr-2"></i>
+                    Baixar Grátis
+                </a>
+                <a href="#features" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition">
+                    Saiba Mais
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 gradient-orange rounded-full flex items-center justify-center">
+                            <i class="fas fa-calculator text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Unit Converter</span>
+                    </div>
+                    <p class="text-gray-400">
+                        O conversor de unidades mais prático e preciso para seu dia a dia.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-primary transition">Funcionalidades</a></li>
+                        <li><a href="#categories" class="hover:text-primary transition">Categorias</a></li>
+                        <li><a href="#download" class="hover:text-primary transition">Download</a></li>
+                        <li><a href="politica-privacidade.html" class="hover:text-primary transition">Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2 text-primary"></i> contato@unitconverter.com</li>
+                        <li><i class="fas fa-globe mr-2 text-primary"></i> www.unitconverter.com</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>© 2024 Unit Converter. Todos os direitos reservados.</p>
+                <p class="mt-2 text-sm">Feito com ❤️ para facilitar suas conversões</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
