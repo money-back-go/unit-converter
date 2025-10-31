@@ -1,116 +1,55 @@
-# 📱 Unit Converter - Conversor de Unidades
+# 📱 Unit Converter - Site de Divulgação
 
 <div align="center">
 
-![Flutter](https://img.shields.io/badge/Flutter-3.35.3-blue?logo=flutter)
-![Dart](https://img.shields.io/badge/Dart-3.9.2-blue?logo=dart)
+![Status](https://img.shields.io/badge/status-live-success)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-lightgrey)
 
-**Conversor de unidades simples, rápido e 100% offline**
+**Conversor de Unidades - Landing Page e Política de Privacidade**
 
-[Download](#-download) • [Funcionalidades](#-funcionalidades) • [Categorias](#-categorias) • [Documentação](#-documentação)
+[Ver Site](https://money-back-go.github.io/unit-converter/) • [Política de Privacidade](https://money-back-go.github.io/unit-converter/politica-privacidade.html)
 
 </div>
 
 ---
 
-## 📖 Sobre
+## 📖 Sobre o App
 
-**Unit Converter** é um aplicativo Flutter moderno e minimalista para converter entre diferentes unidades de medida. Com 8 categorias completas e mais de 50 unidades diferentes, é a solução perfeita para estudantes, profissionais e qualquer pessoa que precise de conversões rápidas e precisas.
+**Unit Converter** é um aplicativo mobile para converter entre diferentes unidades de medida. Com 8 categorias completas e mais de 50 unidades diferentes.
 
-### ✨ Destaques
+### ✨ Destaques do App
 
 - 🚀 **100% Offline** - Funciona sem internet
 - 🎯 **8 Categorias** - Comprimento, peso, temperatura, volume, área, velocidade, tempo e dados
 - 💯 **Precisão Absoluta** - Fórmulas matemáticas oficiais
 - 🎨 **Interface Moderna** - Design limpo e intuitivo
 - 🆓 **Totalmente Gratuito** - Sem anúncios ou compras
-- ⚡ **Super Leve** - Menos de 50MB
 
 ---
 
-## 🎯 Funcionalidades
+## 🌐 Este Repositório
 
-### 📏 8 Categorias de Conversão
+Este repositório contém apenas os **materiais de divulgação** do app:
 
-| Categoria | Unidades Disponíveis |
-|-----------|---------------------|
-| 📏 **Comprimento** | Metro, Quilômetro, Centímetro, Milímetro, Milha, Pé, Polegada |
-| ⚖️ **Peso** | Quilograma, Grama, Miligrama, Tonelada, Libra, Onça |
-| 🌡️ **Temperatura** | Celsius, Fahrenheit, Kelvin |
-| 💧 **Volume** | Litro, Mililitro, Metro Cúbico, Galão, Xícara |
-| 📐 **Área** | Metro Quadrado, Quilômetro Quadrado, Hectare, Acre, Pé Quadrado |
-| 🚀 **Velocidade** | Km/h, M/s, Milha/h, Nó |
-| ⏰ **Tempo** | Segundo, Minuto, Hora, Dia, Semana, Mês, Ano |
-| 💾 **Dados Digitais** | Byte, Kilobyte, Megabyte, Gigabyte, Terabyte |
+### 📄 Arquivos Incluídos:
 
-### 🎨 Telas Principais
+- **docs/index.html** - Landing page responsiva
+- **docs/politica-privacidade.html** - Política de privacidade
+- **descricao-google-play.txt** - Descrição para Google Play Store
+- **descricao-app-store.txt** - Descrição para Apple App Store
+- **keywords.txt** - Palavras-chave para ASO
+- **CHECKLIST_PUBLICACAO.txt** - Guia de publicação nas lojas
 
-- **Onboarding** - Introdução de 3 páginas com botão "Pular"
-- **Home** - Grid com 8 categorias coloridas
-- **Conversor** - Interface intuitiva com resultados instantâneos
-- **Sobre** - Informações do app
-- **Configurações** - Preferências do usuário
+### 🔗 Links Públicos:
 
----
-
-## 🛠️ Tecnologias
-
-- **Framework:** Flutter 3.35.3
-- **Linguagem:** Dart 3.9.2
-- **Navegação:** GoRouter
-- **Fontes:** Google Fonts (Nunito)
-- **Armazenamento:** SharedPreferences (apenas preferências locais)
-
-### 📦 Principais Dependências
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  go_router: 12.1.3
-  provider: 6.1.5
-  google_fonts: 6.1.0
-  smooth_page_indicator: 1.1.0
-  shared_preferences: 2.5.3
+**Landing Page:**
+```
+https://money-back-go.github.io/unit-converter/
 ```
 
----
-
-## 🚀 Como Executar
-
-### Pré-requisitos
-
-- Flutter SDK 3.0+
-- Dart SDK 3.0+
-- Android Studio / Xcode
-
-### Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/money-back-go/unit-converter.git
-cd unit-converter
-
-# Instale as dependências
-flutter pub get
-
-# Execute o app
-flutter run
+**Política de Privacidade (para usar nas lojas):**
 ```
-
-### Builds de Produção
-
-```bash
-# Android APK
-flutter build apk --release
-
-# Android App Bundle (Google Play)
-flutter build appbundle --release
-
-# iOS (requer Mac)
-flutter build ios --release
+https://money-back-go.github.io/unit-converter/politica-privacidade.html
 ```
 
 ---
@@ -126,114 +65,45 @@ flutter build ios --release
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📏 Categorias de Conversão
 
-```
-unit-converter/
-├── lib/
-│   ├── app/                        # Arquivos base (tema, router, utils)
-│   │   ├── theme.dart             # Tema e cores do app
-│   │   ├── router.dart            # Navegação GoRouter
-│   │   ├── utils.dart             # Utilitários
-│   │   └── widgets.dart           # Widgets customizados
-│   ├── aplicativo_cliente/        # Telas do app
-│   │   ├── home/                  # Tela inicial com categorias
-│   │   ├── converter/             # Tela de conversão
-│   │   ├── onboarding/            # Introdução do app
-│   │   ├── sobre/                 # Sobre o app
-│   │   └── configuracoes/         # Configurações
-│   ├── app_state.dart             # Estado global
-│   └── main.dart                  # Entry point
-├── assets/                         # Recursos (imagens, fontes)
-├── android/                        # Projeto Android
-├── ios/                            # Projeto iOS
-├── landing-page.html              # Landing page de divulgação
-├── politica-privacidade.html      # Política de privacidade
-└── pubspec.yaml                   # Dependências
-```
+O app oferece conversão entre mais de 50 unidades em 8 categorias:
+
+- 📏 **Comprimento** - Metro, Quilômetro, Milha, Pé, Polegada, etc.
+- ⚖️ **Peso** - Quilograma, Grama, Libra, Onça, Tonelada
+- 🌡️ **Temperatura** - Celsius, Fahrenheit, Kelvin
+- 💧 **Volume** - Litro, Mililitro, Galão, Metro Cúbico
+- 📐 **Área** - Metro Quadrado, Hectare, Acre
+- 🚀 **Velocidade** - Km/h, M/s, Milha/h, Nós
+- ⏰ **Tempo** - Segundos, Minutos, Horas, Dias, Semanas
+- 💾 **Dados Digitais** - Bytes, KB, MB, GB, TB
 
 ---
 
-## 🎨 Design System
+## 🎨 Tecnologias do Site
 
-### Cores Principais
-
-```dart
-Primary:    #FFAE14  // Laranja vibrante
-Secondary:  #15203D  // Azul escuro
-Alternate:  #FF5963  // Vermelho/rosa
-Success:    #28A745  // Verde
-```
-
-### Tipografia
-
-- **Fonte:** Nunito (Google Fonts)
-- **Pesos:** Regular (400), Medium (500), SemiBold (600), Bold (700), ExtraBold (800)
-
----
-
-## 📄 Documentação Adicional
-
-- 📋 [Checklist de Publicação](CHECKLIST_PUBLICACAO.txt)
-- 📝 [Descrição Google Play](descricao-google-play.txt)
-- 🍎 [Descrição App Store](descricao-app-store.txt)
-- 🔑 [Palavras-chave](keywords.txt)
-- 🌐 [Landing Page README](LANDING_PAGE_README.md)
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer fork do projeto
-2. Criar uma branch (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abrir um Pull Request
-
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+- **HTML5** - Estrutura
+- **Tailwind CSS** - Estilização responsiva
+- **Font Awesome** - Ícones
+- **Google Fonts** - Tipografia Nunito
 
 ---
 
 ## 📧 Contato
 
 - **Email:** contato@unitconverter.com
-- **Website:** [Landing Page](landing-page.html)
+- **Website:** [Landing Page](https://money-back-go.github.io/unit-converter/)
 
 ---
 
-## 🎯 Roadmap
+## 📝 Licença
 
-- [x] 8 categorias de conversão
-- [x] Interface moderna
-- [x] Funcionamento offline
-- [x] Landing page
-- [ ] Modo escuro completo
-- [ ] Histórico de conversões
-- [ ] Favoritar unidades mais usadas
-- [ ] Suporte a mais idiomas
-- [ ] Widget para tela inicial
-
----
-
-## 📊 Status do Projeto
-
-**Versão Atual:** 1.0.0  
-**Status:** ✅ Pronto para produção  
-**Plataformas:** Android, iOS
+© 2024 Unit Converter. Todos os direitos reservados.
 
 ---
 
 <div align="center">
 
-**Desenvolvido com ❤️ em Flutter**
-
-[![Flutter](https://img.shields.io/badge/Made%20with-Flutter-02569B?logo=flutter)](https://flutter.dev)
+**Site desenvolvido com ❤️ para divulgar o melhor conversor de unidades**
 
 </div>
-
