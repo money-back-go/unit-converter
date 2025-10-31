@@ -28,8 +28,10 @@ build/
 # Arquivos de documentação local (manter apenas no GitHub)
 !docs/
 
+# Arquivos de texto locais (não enviar para GitHub)
+*.txt
+
 # Manter apenas arquivos de divulgação no GitHub:
 # - docs/ (landing page e política)
 # - README.md
-# - Descrições para as lojas
 # - .gitignore
