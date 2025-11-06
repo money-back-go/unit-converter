@@ -31,6 +31,12 @@ build/
 # Arquivos de texto locais (não enviar para GitHub)
 *.txt
 
+# Arquivos de banco de dados (NUNCA enviar!)
+*.dump
+*.sql
+*.db
+*.sqlite
+
 # Manter apenas arquivos de divulgação no GitHub:
 # - docs/ (landing page e política)
 # - README.md
